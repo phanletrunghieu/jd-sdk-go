@@ -13,7 +13,7 @@ package request
 import (
 	"encoding/json"
 	"fmt"
-	"github/bepicolombo/jd-sdk-go/entity"
+	"github.com/BepiColombo/jd-sdk-go/entity"
 	"strconv"
 )
 
