@@ -3,7 +3,7 @@ package request
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/BepiColombo/jd-sdk-go/utils"
+	"github.com/jarvis4901/jd-sdk-go/utils"
 	"time"
 )
 

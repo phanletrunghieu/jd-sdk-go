@@ -1,5 +1,7 @@
-module github.com/BepiColombo/jd-sdk-go
+module github.com/jarvis4901/jd-sdk-go
 
 go 1.14
 
-require github.com/google/go-querystring v1.0.0
+require (
+	github.com/google/go-querystring v1.0.0
+)

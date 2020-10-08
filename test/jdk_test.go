@@ -2,7 +2,7 @@ package test
 
 import (
 	"fmt"
-	"github.com/BepiColombo/jd-sdk-go/request"
+	"github.com/jarvis4901/jd-sdk-go/request"
 	"testing"
 )
 
