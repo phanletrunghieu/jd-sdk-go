@@ -11,8 +11,9 @@ package request
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/jarvis4901/jd-sdk-go/entity"
 	"strconv"
+
+	"github.com/jarvis4901/jd-sdk-go/entity"
 )
 
 type YouLikeGoodsQueryRequest struct {
@@ -28,9 +29,9 @@ type YouLikeGoodsReq struct {
 	SiteId     string `json:"siteId,omitempty"`     // 站点ID是指在联盟后台的推广管理中的网站Id、APPID（1、通用转链接口禁止使用社交媒体id入参；2、订单来源，即投放链接的网址或应用必须与传入的网站ID/AppID备案一致，否则订单会判“无效-来源与备案网址不符”）
 	PositionId string `json:"positionId,omitempty"` // 推广位id
 	Ext1       string `json:"ext1,omitempty"`       // 系统扩展参数，无需传入
-	//SkuId    int64 `json:"skuId,omitempty"`    // 预留字段，请勿传入
-	HasCoupon  int `json:"hasCoupon,omitempty"`  // 1：只查询有最优券商品，不传值不做限制
-	UserIdType int `json:"userIdType,omitempty"` // 支用户ID类型，传入此参数可获得个性化推荐结果。
+	SkuId      int64  `json:"skuId,omitempty"`      // 预留字段，请勿传入
+	HasCoupon  int    `json:"hasCoupon,omitempty"`  // 1：只查询有最优券商品，不传值不做限制
+	UserIdType int    `json:"userIdType,omitempty"` // 支用户ID类型，传入此参数可获得个性化推荐结果。
 	// 当前userIdType支持的枚举值包括：8、16、32、64、128、32768。userIdType和userId需同时传入，且一一对应。
 	//userIdType各枚举值对应的userId含义如下：8(安卓移动设备Imei); 16(苹果移动设备Openudid)；32(苹果移动设备idfa); 64(安卓移动设备imei的md5编码，32位，大写，匹配率略低);
 	//128(苹果移动设备idfa的md5编码，32位，大写，匹配率略低); 32768(安卓移动设备oaid)
