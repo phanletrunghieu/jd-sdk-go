@@ -10,8 +10,9 @@ package request
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/jarvis4901/jd-sdk-go/entity"
 	"strconv"
+
+	"github.com/jarvis4901/jd-sdk-go/entity"
 )
 
 type CommonPromotionRequest struct {
@@ -38,9 +39,13 @@ type PromotionCodeReq struct {
 //}
 
 type CommonPromotionResponse struct {
-	Code    int    `json:"code"`
-	Message string `json:"message"`
-	Data    string `json:"data"`
+	Code    int                 `json:"code"`
+	Message string              `json:"message"`
+	Data    CommonPromotionResp `json:"data"`
+}
+
+type CommonPromotionResp struct {
+	ClickURL string `json:"clickURL,omitempty"`
 }
 
 func (c *JdClient) CommonPromotionGet(req CommonPromotionRequest) (queryResult *CommonPromotionResponse, e error) {
@@ -74,7 +79,6 @@ func (c *JdClient) CommonPromotionGet(req CommonPromotionRequest) (queryResult *
 		e := &CommonPromotionResponse{
 			Code:    code,
 			Message: errResponseBody.Zh_desc,
-			Data:    "",
 		}
 		return e, nil
 	}
